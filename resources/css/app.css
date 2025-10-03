@@ -23,20 +23,64 @@
     --color-zinc-900: #171717;
     --color-zinc-950: #0a0a0a;
 
-    --color-accent: var(--color-neutral-800);
-    --color-accent-content: var(--color-neutral-800);
-    --color-accent-foreground: var(--color-white);
+    --color-dusk-900: #050714;
+    --color-dusk-800: #0b1026;
+    --color-dusk-700: #161f3f;
+    --color-dusk-500: #202c58;
+    --color-mauve-500: #6c5ce7;
+    --color-mauve-300: #9d8df5;
+    --color-neon-amber: #f7b733;
+    --color-neon-amber-soft: #ffd27a;
+    --color-night-foreground: #e4e8ff;
+    --color-night-muted: #b3bbf0;
+
+    --color-accent: var(--color-neon-amber);
+    --color-accent-content: var(--color-neon-amber);
+    --color-accent-foreground: var(--color-dusk-900);
+    --color-foreground-soft: var(--color-night-foreground);
+    --color-foreground-muted: var(--color-night-muted);
 }
 
 @layer theme {
     .dark {
-        --color-accent: var(--color-white);
-        --color-accent-content: var(--color-white);
-        --color-accent-foreground: var(--color-neutral-800);
+        --color-accent: var(--color-neon-amber-soft);
+        --color-accent-content: var(--color-neon-amber-soft);
+        --color-accent-foreground: var(--color-dusk-900);
+        --color-foreground-soft: var(--color-night-foreground);
+        --color-foreground-muted: var(--color-night-muted);
     }
 }
 
 @layer base {
+
+    body {
+        position: relative;
+        min-height: 100vh;
+        color: var(--color-foreground-soft);
+        background-color: var(--color-dusk-900);
+        background-image:
+            radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--color-mauve-500) 45%, transparent), transparent 55%),
+            radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--color-neon-amber) 35%, transparent), transparent 60%),
+            linear-gradient(160deg, var(--color-dusk-900) 0%, var(--color-dusk-700) 45%, var(--color-dusk-500) 100%);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJnIiB4PSIwIiB5PSIwIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuOTUiIG51bUZyZXF1ZW5jaWVzPSI2Ii8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCAwIDAgMCAwLjAyIDAgMCAwIDAgMCAuMDA5IDAgMCAwIDAgMCAwIDAgMCAxIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiBmaWxsPSIjMDAwIiBmaWx0ZXI9InVybCgjZykiIG9wYWNpdHk9IjAuMjUiLz48L3N2Zz4=');
+        mix-blend-mode: soft-light;
+        opacity: 0.45;
+    }
+
+    body * {
+        color: inherit;
+    }
 
     *,
     ::after,
@@ -44,6 +88,30 @@
     ::backdrop,
     ::file-selector-button {
         border-color: var(--color-gray-200, currentColor);
+    }
+
+    .card-night {
+        background: linear-gradient(165deg, color-mix(in srgb, var(--color-dusk-700) 85%, transparent) 0%, color-mix(in srgb, var(--color-dusk-500) 70%, transparent) 100%);
+        border: 1px solid color-mix(in srgb, var(--color-mauve-300) 25%, transparent);
+        border-radius: theme('borderRadius.xl');
+        box-shadow:
+            0 12px 35px -20px color-mix(in srgb, var(--color-mauve-500) 45%, transparent),
+            inset 0 1px 0 0 color-mix(in srgb, var(--color-night-foreground) 18%, transparent);
+        backdrop-filter: blur(18px) saturate(130%);
+        color: var(--color-foreground-soft);
+    }
+
+    .glow-text {
+        color: var(--color-accent);
+        text-shadow:
+            0 0 12px color-mix(in srgb, var(--color-neon-amber) 60%, transparent),
+            0 0 24px color-mix(in srgb, var(--color-neon-amber-soft) 50%, transparent);
+        letter-spacing: 0.02em;
+    }
+
+    .glow-text-muted {
+        color: var(--color-foreground-muted);
+        text-shadow: 0 0 6px color-mix(in srgb, var(--color-mauve-500) 35%, transparent);
     }
 }
 
