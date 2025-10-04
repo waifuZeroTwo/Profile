@@ -150,6 +150,8 @@
                             </div>
                         </div>
                     </section>
+
+                    @include('partials.safe-space')
                 </div>
             </main>
         </div>
