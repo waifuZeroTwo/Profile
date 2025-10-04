@@ -1,161 +1,380 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Moonlight Messages — Afterglow Studio</title>
+    <title>moonlight messages · zero</title>
 
-        <link rel="icon" href="/favicon.ico" sizes="any">
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
-        <!-- Styles -->
-        <style>
-            /*! tailwindcss v4.0.14 | MIT License | https://tailwindcss.com */
-            @layer theme{:root,:host{--font-sans:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--color-green-600:oklch(.627 .194 149.214);--color-gray-900:oklch(.21 .034 264.665);--color-zinc-50:oklch(.985 0 0);--color-zinc-200:oklch(.92 .004 286.32);--color-zinc-400:oklch(.705 .015 286.067);--color-zinc-500:oklch(.552 .016 285.938);--color-zinc-600:oklch(.442 .017 285.786);--color-zinc-700:oklch(.37 .013 285.805);--color-zinc-800:oklch(.274 .006 286.033);--color-zinc-900:oklch(.21 .006 285.885);--color-neutral-100:oklch(.97 0 0);--color-neutral-200:oklch(.922 0 0);--color-neutral-700:oklch(.371 0 0);--color-neutral-800:oklch(.269 0 0);--color-neutral-900:oklch(.205 0 0);--color-neutral-950:oklch(.145 0 0);--color-stone-800:oklch(.268 .007 34.298);--color-stone-950:oklch(.147 .004 49.25);--color-black:#000;--color-white:#fff;--spacing:.25rem;--container-sm:24rem;--container-md:28rem;--container-lg:32rem;--container-4xl:56rem;--text-xs:.75rem;--text-xs--line-height:calc(1/.75);--text-sm:.875rem;--text-sm--line-height:calc(1.25/.875);--text-lg:1.125rem;--text-lg--line-height:calc(1.75/1.125);--font-weight-normal:400;--font-weight-medium:500;--font-weight-semibold:600;--leading-tight:1.25;--leading-normal:1.5;--radius-sm:.25rem;--radius-md:.375rem;--radius-lg:.5rem;--radius-xl:.75rem;--aspect-video:16/9;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4,0,.2,1);--default-font-family:var(--font-sans);--default-font-feature-settings:var(--font-sans--font-feature-settings);--default-font-variation-settings:var(--font-sans--font-variation-settings);--default-mono-font-family:var(--font-mono);--default-mono-font-feature-settings:var(--font-mono--font-feature-settings);--default-mono-font-variation-settings:var(--font-mono--font-variation-settings)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}body{line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1;color:color-mix(in oklab,currentColor 50%,transparent)}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.sr-only{clip:rect(0,0,0,0);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.absolute{position:absolute}.relative{position:relative}.static{position:static}.sticky{position:sticky}.inset-0{inset:calc(var(--spacing)*0)}.inset-y-\[3px\]{inset-block:3px}.start-0{inset-inline-start:calc(var(--spacing)*0)}.end-0{inset-inline-end:calc(var(--spacing)*0)}.top-0{top:calc(var(--spacing)*0)}.z-20{z-index:20}.container{width:100%}@media (width>=40rem){.container{max-width:40rem}}@media (width>=48rem){.container{max-width:48rem}}@media (width>=64rem){.container{max-width:64rem}}@media (width>=80rem){.container{max-width:80rem}}@media (width>=96rem){.container{max-width:96rem}}.mx-auto{margin-inline:auto}.my-6{margin-block:calc(var(--spacing)*6)}.-ms-8{margin-inline-start:calc(var(--spacing)*-8)}.ms-1{margin-inline-start:calc(var(--spacing)*1)}.ms-2{margin-inline-start:calc(var(--spacing)*2)}.ms-4{margin-inline-start:calc(var(--spacing)*4)}.me-1\.5{margin-inline-end:calc(var(--spacing)*1.5)}.me-2{margin-inline-end:calc(var(--spacing)*2)}.me-3{margin-inline-end:calc(var(--spacing)*3)}.me-5{margin-inline-end:calc(var(--spacing)*5)}.me-10{margin-inline-end:calc(var(--spacing)*10)}.-mt-\[4\.9rem\]{margin-top:-4.9rem}.mt-2{margin-top:calc(var(--spacing)*2)}.mt-4{margin-top:calc(var(--spacing)*4)}.mt-5{margin-top:calc(var(--spacing)*5)}.mt-6{margin-top:calc(var(--spacing)*6)}.mt-10{margin-top:calc(var(--spacing)*10)}.mt-auto{margin-top:auto}.-mb-px{margin-bottom:-1px}.mb-0\.5{margin-bottom:calc(var(--spacing)*.5)}.mb-1{margin-bottom:calc(var(--spacing)*1)}.mb-2{margin-bottom:calc(var(--spacing)*2)}.mb-4{margin-bottom:calc(var(--spacing)*4)}.mb-5{margin-bottom:calc(var(--spacing)*5)}.mb-6{margin-bottom:calc(var(--spacing)*6)}.mb-\[2px\]{margin-bottom:2px}.block{display:block}.contents{display:contents}.flex{display:flex}.grid{display:grid}.hidden{display:none}.inline-block{display:inline-block}.inline-flex{display:inline-flex}.table{display:table}.aspect-\[335\/376\]{aspect-ratio:335/376}.aspect-square{aspect-ratio:1}.aspect-video{aspect-ratio:var(--aspect-video)}.size-3\!{width:calc(var(--spacing)*3)!important;height:calc(var(--spacing)*3)!important}.size-5{width:calc(var(--spacing)*5);height:calc(var(--spacing)*5)}.size-8{width:calc(var(--spacing)*8);height:calc(var(--spacing)*8)}.size-9{width:calc(var(--spacing)*9);height:calc(var(--spacing)*9)}.size-full{width:100%;height:100%}.\!h-10{height:calc(var(--spacing)*10)!important}.h-1\.5{height:calc(var(--spacing)*1.5)}.h-2\.5{height:calc(var(--spacing)*2.5)}.h-3\.5{height:calc(var(--spacing)*3.5)}.h-7{height:calc(var(--spacing)*7)}.h-8{height:calc(var(--spacing)*8)}.h-9{height:calc(var(--spacing)*9)}.h-10{height:calc(var(--spacing)*10)}.h-14\.5{height:calc(var(--spacing)*14.5)}.h-dvh{height:100dvh}.h-full{height:100%}.min-h-screen{min-height:100vh}.min-h-svh{min-height:100svh}.w-1\.5{width:calc(var(--spacing)*1.5)}.w-2\.5{width:calc(var(--spacing)*2.5)}.w-3\.5{width:calc(var(--spacing)*3.5)}.w-8{width:calc(var(--spacing)*8)}.w-9{width:calc(var(--spacing)*9)}.w-10{width:calc(var(--spacing)*10)}.w-\[220px\]{width:220px}.w-\[448px\]{width:448px}.w-full{width:100%}.w-px{width:1px}.max-w-\[335px\]{max-width:335px}.max-w-lg{max-width:var(--container-lg)}.max-w-md{max-width:var(--container-md)}.max-w-none{max-width:none}.max-w-sm{max-width:var(--container-sm)}.flex-1{flex:1}.shrink-0{flex-shrink:0}.translate-y-0{--tw-translate-y:calc(var(--spacing)*0);translate:var(--tw-translate-x)var(--tw-translate-y)}.cursor-pointer{cursor:pointer}.auto-rows-min{grid-auto-rows:min-content}.flex-col{flex-direction:column}.flex-col-reverse{flex-direction:column-reverse}.items-center{align-items:center}.items-start{align-items:flex-start}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.justify-end{justify-content:flex-end}.gap-2{gap:calc(var(--spacing)*2)}.gap-3{gap:calc(var(--spacing)*3)}.gap-4{gap:calc(var(--spacing)*4)}.gap-6{gap:calc(var(--spacing)*6)}:where(.space-y-2>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*2)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-3>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*3)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*3)*calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-6>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*6)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*6)*calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-\[2px\]>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(2px*var(--tw-space-y-reverse));margin-block-end:calc(2px*calc(1 - var(--tw-space-y-reverse)))}:where(.space-x-0\.5>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-start:calc(calc(var(--spacing)*.5)*var(--tw-space-x-reverse));margin-inline-end:calc(calc(var(--spacing)*.5)*calc(1 - var(--tw-space-x-reverse)))}:where(.space-x-1>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-start:calc(calc(var(--spacing)*1)*var(--tw-space-x-reverse));margin-inline-end:calc(calc(var(--spacing)*1)*calc(1 - var(--tw-space-x-reverse)))}:where(.space-x-2>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-start:calc(calc(var(--spacing)*2)*var(--tw-space-x-reverse));margin-inline-end:calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-x-reverse)))}.self-stretch{align-self:stretch}.truncate{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:3.40282e38px}.rounded-lg{border-radius:var(--radius-lg)}.rounded-md{border-radius:var(--radius-md)}.rounded-sm{border-radius:var(--radius-sm)}.rounded-xl{border-radius:var(--radius-xl)}.rounded-ee-lg{border-end-end-radius:var(--radius-lg)}.rounded-es-lg{border-end-start-radius:var(--radius-lg)}.rounded-t-lg{border-top-left-radius:var(--radius-lg);border-top-right-radius:var(--radius-lg)}.border{border-style:var(--tw-border-style);border-width:1px}.border-r{border-right-style:var(--tw-border-style);border-right-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-\[\#19140035\]{border-color:#19140035}.border-\[\#e3e3e0\]{border-color:#e3e3e0}.border-black{border-color:var(--color-black)}.border-neutral-200{border-color:var(--color-neutral-200)}.border-transparent{border-color:#0000}.border-zinc-200{border-color:var(--color-zinc-200)}.bg-\[\#1b1b18\]{background-color:#1b1b18}.bg-\[\#FDFDFC\]{background-color:#fdfdfc}.bg-\[\#dbdbd7\]{background-color:#dbdbd7}.bg-\[\#fff2f2\]{background-color:#fff2f2}.bg-neutral-100{background-color:var(--color-neutral-100)}.bg-neutral-200{background-color:var(--color-neutral-200)}.bg-neutral-900{background-color:var(--color-neutral-900)}.bg-white{background-color:var(--color-white)}.bg-zinc-50{background-color:var(--color-zinc-50)}.bg-zinc-200{background-color:var(--color-zinc-200)}.fill-current{fill:currentColor}.stroke-gray-900\/20{stroke:color-mix(in oklab,var(--color-gray-900)20%,transparent)}.p-0{padding:calc(var(--spacing)*0)}.p-6{padding:calc(var(--spacing)*6)}.p-10{padding:calc(var(--spacing)*10)}.px-1{padding-inline:calc(var(--spacing)*1)}.px-5{padding-inline:calc(var(--spacing)*5)}.px-8{padding-inline:calc(var(--spacing)*8)}.px-10{padding-inline:calc(var(--spacing)*10)}.py-0\!{padding-block:calc(var(--spacing)*0)!important}.py-1{padding-block:calc(var(--spacing)*1)}.py-1\.5{padding-block:calc(var(--spacing)*1.5)}.py-2{padding-block:calc(var(--spacing)*2)}.py-8{padding-block:calc(var(--spacing)*8)}.ps-3{padding-inline-start:calc(var(--spacing)*3)}.ps-7{padding-inline-start:calc(var(--spacing)*7)}.pe-4{padding-inline-end:calc(var(--spacing)*4)}.pb-4{padding-bottom:calc(var(--spacing)*4)}.pb-12{padding-bottom:calc(var(--spacing)*12)}.text-center{text-align:center}.text-start{text-align:start}.text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.text-\[13px\]{font-size:13px}.leading-\[20px\]{--tw-leading:20px;line-height:20px}.leading-none{--tw-leading:1;line-height:1}.leading-normal{--tw-leading:var(--leading-normal);line-height:var(--leading-normal)}.leading-tight{--tw-leading:var(--leading-tight);line-height:var(--leading-tight)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-normal{--tw-font-weight:var(--font-weight-normal);font-weight:var(--font-weight-normal)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.\!text-green-600{color:var(--color-green-600)!important}.text-\[\#1b1b18\]{color:#1b1b18}.text-\[\#706f6c\]{color:#706f6c}.text-\[\#F53003\],.text-\[\#f53003\]{color:#f53003}.text-black{color:var(--color-black)}.text-green-600{color:var(--color-green-600)}.text-stone-800{color:var(--color-stone-800)}.text-white{color:var(--color-white)}.text-zinc-400{color:var(--color-zinc-400)}.text-zinc-500{color:var(--color-zinc-500)}.text-zinc-600{color:var(--color-zinc-600)}.lowercase{text-transform:lowercase}.underline{text-decoration-line:underline}.underline-offset-4{text-underline-offset:4px}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-100{opacity:1}.shadow-\[0px_0px_1px_0px_rgba\(0\,0\,0\,0\.03\)\,0px_1px_2px_0px_rgba\(0\,0\,0\,0\.06\)\]{--tw-shadow:0px 0px 1px 0px var(--tw-shadow-color,#00000008),0px 1px 2px 0px var(--tw-shadow-color,#0000000f);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-\[inset_0px_0px_0px_1px_rgba\(26\,26\,0\,0\.16\)\]{--tw-shadow:inset 0px 0px 0px 1px var(--tw-shadow-color,#1a1a0029);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-xs{--tw-shadow:0 1px 2px 0 var(--tw-shadow-color,#0000000d);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.outline{outline-style:var(--tw-outline-style);outline-width:1px}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-opacity{transition-property:opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.delay-300{transition-delay:.3s}.duration-750{--tw-duration:.75s;transition-duration:.75s}.not-has-\[nav\]\:hidden:not(:has(:is(nav))){display:none}.group-data-open\/disclosure-button\:block:is(:where(.group\/disclosure-button)[data-open] *){display:block}.group-data-open\/disclosure-button\:hidden:is(:where(.group\/disclosure-button)[data-open] *){display:none}.before\:absolute:before{content:var(--tw-content);position:absolute}.before\:start-\[0\.4rem\]:before{content:var(--tw-content);inset-inline-start:.4rem}.before\:top-0:before{content:var(--tw-content);top:calc(var(--spacing)*0)}.before\:top-1\/2:before{content:var(--tw-content);top:50%}.before\:bottom-0:before{content:var(--tw-content);bottom:calc(var(--spacing)*0)}.before\:bottom-1\/2:before{content:var(--tw-content);bottom:50%}.before\:left-\[0\.4rem\]:before{content:var(--tw-content);left:.4rem}.before\:border-l:before{content:var(--tw-content);border-left-style:var(--tw-border-style);border-left-width:1px}.before\:border-\[\#e3e3e0\]:before{content:var(--tw-content);border-color:#e3e3e0}@media (hover:hover){.hover\:border-\[\#1915014a\]:hover{border-color:#1915014a}.hover\:border-\[\#19140035\]:hover{border-color:#19140035}.hover\:border-black:hover{border-color:var(--color-black)}.hover\:bg-black:hover{background-color:var(--color-black)}.hover\:bg-zinc-800\/5:hover{background-color:color-mix(in oklab,var(--color-zinc-800)5%,transparent)}.hover\:text-zinc-800:hover{color:var(--color-zinc-800)}}.data-open\:block[data-open]{display:block}@media (width<64rem){.max-lg\:hidden{display:none}}@media (width<48rem){.max-md\:flex-col{flex-direction:column}.max-md\:pt-6{padding-top:calc(var(--spacing)*6)}}@media (width>=40rem){.sm\:w-\[350px\]{width:350px}.sm\:px-0{padding-inline:calc(var(--spacing)*0)}}@media (width>=48rem){.md\:hidden{display:none}.md\:w-\[220px\]{width:220px}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:p-10{padding:calc(var(--spacing)*10)}}@media (width>=64rem){.lg\:-ms-px{margin-inline-start:-1px}.lg\:ms-0{margin-inline-start:calc(var(--spacing)*0)}.lg\:-mt-\[6\.6rem\]{margin-top:-6.6rem}.lg\:mb-0{margin-bottom:calc(var(--spacing)*0)}.lg\:mb-6{margin-bottom:calc(var(--spacing)*6)}.lg\:block{display:block}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:aspect-auto{aspect-ratio:auto}.lg\:h-8{height:calc(var(--spacing)*8)}.lg\:w-\[438px\]{width:438px}.lg\:max-w-4xl{max-width:var(--container-4xl)}.lg\:max-w-none{max-width:none}.lg\:grow{flex-grow:1}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:flex-row{flex-direction:row}.lg\:justify-center{justify-content:center}.lg\:rounded-ss-lg{border-start-start-radius:var(--radius-lg)}.lg\:rounded-e-lg{border-start-end-radius:var(--radius-lg);border-end-end-radius:var(--radius-lg)}.lg\:rounded-e-lg\!{border-start-end-radius:var(--radius-lg)!important;border-end-end-radius:var(--radius-lg)!important}.lg\:rounded-ee-none{border-end-end-radius:0}.lg\:rounded-t-none{border-top-left-radius:0;border-top-right-radius:0}.lg\:p-8{padding:calc(var(--spacing)*8)}.lg\:p-20{padding:calc(var(--spacing)*20)}.lg\:px-0{padding-inline:calc(var(--spacing)*0)}}:where(.rtl\:space-x-reverse:where(:dir(rtl),[dir=rtl],[dir=rtl] *)>:not(:last-child)){--tw-space-x-reverse:1}@media (prefers-color-scheme:dark){.dark\:block{display:block}.dark\:hidden{display:none}.dark\:border-r{border-right-style:var(--tw-border-style);border-right-width:1px}.dark\:border-\[\#3E3E3A\]{border-color:#3e3e3a}.dark\:border-\[\#eeeeec\]{border-color:#eeeeec}.dark\:border-neutral-700{border-color:var(--color-neutral-700)}.dark\:border-neutral-800{border-color:var(--color-neutral-800)}.dark\:border-stone-800{border-color:var(--color-stone-800)}.dark\:border-zinc-700{border-color:var(--color-zinc-700)}.dark\:bg-\[\#0a0a0a\]{background-color:#0a0a0a}.dark\:bg-\[\#1D0002\]{background-color:#1d0002}.dark\:bg-\[\#3E3E3A\]{background-color:#3e3e3a}.dark\:bg-\[\#161615\]{background-color:#161615}.dark\:bg-\[\#eeeeec\]{background-color:#eeeeec}.dark\:bg-neutral-700{background-color:var(--color-neutral-700)}.dark\:bg-stone-950{background-color:var(--color-stone-950)}.dark\:bg-white\/30{background-color:color-mix(in oklab,var(--color-white)30%,transparent)}.dark\:bg-zinc-800{background-color:var(--color-zinc-800)}.dark\:bg-zinc-900{background-color:var(--color-zinc-900)}.dark\:bg-linear-to-b{--tw-gradient-position:to bottom in oklab;background-image:linear-gradient(var(--tw-gradient-stops))}.dark\:from-neutral-950{--tw-gradient-from:var(--color-neutral-950);--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))}.dark\:to-neutral-900{--tw-gradient-to:var(--color-neutral-900);--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))}.dark\:stroke-neutral-100\/20{stroke:color-mix(in oklab,var(--color-neutral-100)20%,transparent)}.dark\:text-\[\#1C1C1A\]{color:#1c1c1a}.dark\:text-\[\#A1A09A\]{color:#a1a09a}.dark\:text-\[\#EDEDEC\]{color:#ededec}.dark\:text-\[\#F61500\]{color:#f61500}.dark\:text-\[\#FF4433\]{color:#f43}.dark\:text-black{color:var(--color-black)}.dark\:text-white{color:var(--color-white)}.dark\:text-white\/80{color:color-mix(in oklab,var(--color-white)80%,transparent)}.dark\:text-zinc-400{color:var(--color-zinc-400)}.dark\:shadow-\[inset_0px_0px_0px_1px_\#fffaed2d\]{--tw-shadow:inset 0px 0px 0px 1px var(--tw-shadow-color,#fffaed2d);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.dark\:before\:border-\[\#3E3E3A\]:before{content:var(--tw-content);border-color:#3e3e3a}@media (hover:hover){.dark\:hover\:border-\[\#3E3E3A\]:hover{border-color:#3e3e3a}.dark\:hover\:border-\[\#62605b\]:hover{border-color:#62605b}.dark\:hover\:border-white:hover{border-color:var(--color-white)}.dark\:hover\:bg-white:hover{background-color:var(--color-white)}.dark\:hover\:bg-white\/\[7\%\]:hover{background-color:color-mix(in oklab,var(--color-white)7%,transparent)}.dark\:hover\:text-white:hover{color:var(--color-white)}}}@starting-style{.starting\:translate-y-4{--tw-translate-y:calc(var(--spacing)*4);translate:var(--tw-translate-x)var(--tw-translate-y)}}@starting-style{.starting\:translate-y-6{--tw-translate-y:calc(var(--spacing)*6);translate:var(--tw-translate-x)var(--tw-translate-y)}}@starting-style{.starting\:opacity-0{opacity:0}}.\[\&\>div\>svg\]\:size-5>div>svg{width:calc(var(--spacing)*5);height:calc(var(--spacing)*5)}:where(.\[\:where\(\&\)\]\:size-4){width:calc(var(--spacing)*4);height:calc(var(--spacing)*4)}:where(.\[\:where\(\&\)\]\:size-5){width:calc(var(--spacing)*5);height:calc(var(--spacing)*5)}:where(.\[\:where\(\&\)\]\:size-6){width:calc(var(--spacing)*6);height:calc(var(--spacing)*6)}}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property --tw-space-y-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-space-x-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-outline-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-duration{syntax:"*";inherits:false}@property --tw-content{syntax:"*";inherits:false;initial-value:""}@property --tw-gradient-position{syntax:"*";inherits:false}@property --tw-gradient-from{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-via{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-to{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-stops{syntax:"*";inherits:false}@property --tw-gradient-via-stops{syntax:"*";inherits:false}@property --tw-gradient-from-position{syntax:"<length-percentage>";inherits:false;initial-value:0%}@property --tw-gradient-via-position{syntax:"<length-percentage>";inherits:false;initial-value:50%}@property --tw-gradient-to-position{syntax:"<length-percentage>";inherits:false;initial-value:100%}
-        </style>
-    </head>
-    <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-        <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6 not-has-[nav]:hidden">
-            @if (Route::has('login'))
-                <nav class="flex items-center justify-end gap-4">
-                    @auth
-                        <a
-                            href="{{ url('/dashboard') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal"
-                        >
-                            Dashboard
-                        </a>
-                    @else
-                        <a
-                            href="{{ route('login') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
-                        >
-                            Log in
-                        </a>
+    <!-- Midnight Glass Styles -->
+    <style>
+        :root{
+            --ink:#0b0c12; --ink-2:#121320;
+            --mist:#b8b9c6; --hush:#dcdcef;
+            --lilac:#a09bff; --rose:#ffa5c8; --glow:#9ad5ff; --tint:#cbb9ff;
+            --card: rgba(18,19,32,.55); --glass: rgba(255,255,255,.06);
+            --ring: 0 0 0 3px rgba(160,155,255,.35);
+            --radius: 20px; --shadow: 0 20px 60px -20px rgba(3,8,30,.8);
+            --speed: 28s;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0; color:var(--mist);
+            font-family:"Instrument Sans", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            background: radial-gradient(1200px 800px at 20% -10%, #1a1b2f 0%, #0b0c12 60%) fixed;
+            overflow-x:hidden; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+        }
 
-                        @if (Route::has('register'))
-                            <a
-                                href="{{ route('register') }}"
-                                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                                Register
-                            </a>
-                        @endif
-                    @endauth
-                </nav>
-            @endif
-        </header>
-        <div class="flex w-full justify-center transition-all duration-700 lg:grow starting:opacity-0 starting:translate-y-4">
-            <main class="relative w-full max-w-6xl overflow-hidden px-6 py-16 text-white sm:px-10 lg:px-12 lg:py-24">
-                <div class="absolute inset-0 -z-20 bg-gradient-to-br from-[#09091e] via-[#1a1a3a] to-[#24124a]"></div>
-                <div class="absolute inset-0 -z-10 opacity-35">
-                    <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                        <defs>
-                            <filter id="dusk-noise">
-                                <feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="4" stitchTiles="stitch" />
-                                <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.25 0" />
-                            </filter>
-                            <linearGradient id="dusk-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
-                                <stop offset="50%" stop-color="#ff91c1" stop-opacity="0.12" />
-                                <stop offset="100%" stop-color="#6b5cff" stop-opacity="0.08" />
-                            </linearGradient>
-                        </defs>
-                        <rect width="100%" height="100%" fill="url(#dusk-gradient)" filter="url(#dusk-noise)" />
+        /* layered starfield */
+        .stars,.stars:before,.stars:after{content:"";position:fixed;inset:0;background-repeat:repeat;pointer-events:none}
+        .stars{
+            background-image:
+                radial-gradient(1px 1px at 20% 30%, rgba(154,213,255,.7) 0 60%, transparent 61%),
+                radial-gradient(1px 1px at 70% 80%, rgba(255,165,200,.65) 0 60%, transparent 61%),
+                radial-gradient(1px 1px at 40% 60%, rgba(255,255,255,.6) 0 60%, transparent 61%);
+            background-size: 600px 600px, 700px 700px, 500px 500px;
+            animation: drift var(--speed) linear infinite; opacity:.5;
+        }
+        .stars:before{
+            background-image:
+                radial-gradient(1px 1px at 30% 10%, rgba(160,155,255,.7) 0 60%, transparent 61%),
+                radial-gradient(1px 1px at 80% 50%, rgba(255,255,255,.6) 0 60%, transparent 61%);
+            background-size: 900px 900px, 800px 800px;
+            animation: drift calc(var(--speed) * 1.6) linear infinite reverse; opacity:.35;
+        }
+        .stars:after{
+            background-image: radial-gradient(1px 1px at 50% 40%, rgba(154,213,255,.8) 0 60%, transparent 61%);
+            background-size: 1000px 1000px;
+            animation: drift calc(var(--speed) * 2.2) linear infinite; opacity:.25;
+        }
+        @keyframes drift{from{transform:translateY(0)}to{transform:translateY(-300px)}}
+        @media (prefers-reduced-motion:reduce){.stars,.stars:before,.stars:after{animation:none}}
+
+        /* layout */
+        .shell{min-height:100dvh;display:grid;grid-template-rows:auto 1fr auto;padding:28px 20px}
+        header{max-width:1040px;margin-inline:auto;width:100%;height:8px}
+
+        main{max-width:1040px;margin:24px auto;width:100%;display:grid;gap:18px}
+        .hero{
+            position:relative;overflow:hidden;border-radius:clamp(16px,2vw,28px);
+            background: linear-gradient(160deg, rgba(255,255,255,.04), rgba(255,255,255,.02)), var(--card);
+            box-shadow:var(--shadow);padding:clamp(24px,3.5vw,44px);border:1px solid rgba(255,255,255,.12);
+            backdrop-filter:blur(10px);isolation:isolate
+        }
+        .veil{position:absolute;inset:-30% -10% auto -10%;height:70%;background:
+            radial-gradient(600px 300px at 20% 40%, rgba(160,155,255,.35) 0%, transparent 60%),
+            radial-gradient(500px 250px at 80% 20%, rgba(255,165,200,.22) 0%, transparent 60%);
+            filter:blur(20px);z-index:-1;pointer-events:none}
+        h1{margin:0;font-weight:600;line-height:1.15;font-size:clamp(28px,3.2vw,54px);color:var(--hush);letter-spacing:.2px}
+        .tag{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px dashed rgba(255,255,255,.18);background:rgba(255,255,255,.03);font-size:12px;color:#d0d1e4;text-transform:uppercase;letter-spacing:.25em}
+        .lead{color:var(--mist);max-width:62ch;margin:14px 0 0;font-size:clamp(14px,1.4vw,18px);opacity:.9}
+        .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+        .btn{--bg:rgba(160,155,255,.16);--bd:rgba(160,155,255,.4);--fg:#e9e9ff;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 16px;border-radius:999px;border:1px solid var(--bd);color:var(--fg);background:var(--bg);text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.2px;transition:transform .1s ease,background .25s ease,border .25s ease,box-shadow .25s ease;box-shadow:0 12px 30px -18px rgba(160,155,255,.8)}
+        .btn:hover{transform:translateY(-1px);background:rgba(160,155,255,.24)}
+        .btn:focus-visible{outline:none;box-shadow:var(--ring)}
+        .btn.alt{--bg:rgba(255,165,200,.15);--bd:rgba(255,165,200,.5);--fg:#fff1f6;box-shadow:0 12px 32px -18px rgba(255,165,200,.8)}
+        .btn.ghost{--bg:rgba(255,255,255,.06);--bd:rgba(255,255,255,.22);--fg:#e8e9f7;box-shadow:none}
+
+        .grid{display:grid;gap:18px;grid-template-columns:1fr}
+        @media (min-width:960px){.grid{grid-template-columns:1.6fr .9fr}}
+
+        .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)), var(--card);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);backdrop-filter:blur(8px)}
+        .card h2{margin:0 0 8px;color:var(--hush);font-size:clamp(18px,1.6vw,22px);font-weight:600;letter-spacing:.2px}
+        .card p{margin:8px 0 0;line-height:1.6;opacity:.95}
+
+        /* form */
+        .form{display:grid;gap:12px;margin-top:8px}
+        .row{display:grid;gap:8px}
+        label{font-size:12px;text-transform:uppercase;letter-spacing:.22em;opacity:.8}
+        .field{
+            display:flex;align-items:center;gap:10px;
+            background:rgba(255,255,255,.06);
+            border:1px solid rgba(255,255,255,.12);
+            border-radius:14px;padding:12px 14px
+        }
+        .field:focus-within{border-color:rgba(160,155,255,.45);box-shadow:var(--ring)}
+        input, select, textarea{
+            width:100%; border:0; outline:0; background:transparent; color:#e8e9f7; font:inherit
+        }
+        textarea{min-height:140px;resize:vertical}
+        .meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;opacity:.8}
+        .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);cursor:pointer;user-select:none}
+        .dot{width:8px;height:8px;border-radius:999px;box-shadow:0 0 10px 2px currentColor}
+        .lilac{color:var(--lilac)} .rose{color:var(--rose)} .glow{color:var(--glow)} .tint{color:var(--tint)}
+
+        .template-list{display:grid;gap:10px;margin-top:10px}
+        .template{display:flex;gap:10px;align-items:flex-start;padding:12px;border-radius:14px;border:1px dashed rgba(255,255,255,.16);background:rgba(255,255,255,.04)}
+        .template button{margin-left:auto}
+
+        footer{display:flex;justify-content:center;gap:12px;padding:18px 0;opacity:.8;font-size:12px}
+
+        .toggle{inline-size:40px;block-size:40px;display:inline-grid;place-items:center;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.04);color:#e7e7ff;cursor:pointer;transition:transform .1s ease,background .25s ease,border .25s ease}
+        .toggle:hover{transform:translateY(-1px);background:rgba(255,255,255,.08)}
+        .toggle:focus-visible{outline:none;box-shadow:var(--ring)}
+
+        .link{color:var(--hush);padding:0 6px;border-radius:10px;border:1px solid transparent;text-decoration:none}
+        ::selection{background:rgba(160,155,255,.28);color:white}
+    </style>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+
+<div class="shell">
+    <header></header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="veil" aria-hidden="true"></div>
+            <span class="tag">midnight / messages</span>
+            <h1>moonlight messages</h1>
+            <p class="lead">
+                whisper a note into the dusk. soft gradients carry it—slow, kind, with just enough glow to be found.
+            </p>
+            <div class="actions">
+                <a class="btn" href="#send">Compose</a>
+                <a class="btn alt" href="#templates">Use a Template</a>
+                <a class="btn ghost" href="{{ route('playlist') }}">Sleep Playlist</a>
+                <a class="btn" href="{{ route('journal') }}">Dream Journal</a>
+                <button class="toggle" type="button" title="toggle soft rain" aria-pressed="false" id="rainToggle">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M7 19l2-4m3 4l2-4m3 4l2-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M6 10a6 6 0 1112 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
-                </div>
-                <div class="relative flex flex-col gap-12 lg:gap-16">
-                    <section class="relative overflow-hidden rounded-3xl border border-white/15 bg-white/10 p-10 shadow-[0_25px_60px_-20px_rgba(12,6,35,0.8)] backdrop-blur-xl transition-all duration-500 hover:border-[#ff8fc7]/40">
-                        <div class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-white/10 via-transparent to-[#ff8fc7]/20"></div>
-                        <div class="absolute -left-16 -top-24 h-56 w-56 rounded-full bg-[#ff8fc7]/20 blur-3xl"></div>
-                        <div class="absolute -bottom-24 -right-16 h-48 w-48 rounded-full bg-[#5f64ff]/25 blur-3xl"></div>
-                        <div class="relative">
-                            <p class="text-sm uppercase tracking-[0.4em] text-white/60">afterglow studio</p>
-                            <h1 class="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-                                Moonlight Messages
-                            </h1>
-                            <p class="mt-6 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
-                                Whisper a note into the dusk and let it travel on gradients of starlight to someone you cherish.
-                            </p>
-                            <div class="mt-8 flex flex-wrap gap-4">
-                                <a href="{{ route('messages') }}" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/30 bg-white/10 px-6 py-2 text-sm font-medium tracking-wide text-white shadow-[0_10px_30px_-15px_rgba(255,145,193,0.8)] transition-all duration-300 hover:border-[#ff8fc7] hover:bg-[#ff8fc7]/20">
-                                    <span class="absolute inset-0 bg-gradient-to-r from-[#ff8fc7]/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
-                                    <span class="relative">Compose a Message</span>
-                                </a>
-                                <a href="{{ route('journal') }}" class="relative inline-flex items-center justify-center rounded-full border border-white/20 bg-[#1c1b3e]/80 px-6 py-2 text-sm font-medium text-white shadow-[0_15px_35px_-20px_rgba(95,100,255,0.9)] transition-all duration-300 hover:border-[#5f64ff]/60 hover:bg-[#27255c]">
-                                    Visit Dream Journal
-                                </a>
-                                <a href="{{ route('playlist') }}" class="relative inline-flex items-center justify-center rounded-full border border-transparent bg-[#ff8fc7]/80 px-6 py-2 text-sm font-semibold text-[#1b0f2b] shadow-[0_20px_40px_-18px_rgba(255,143,199,0.8)] transition-all duration-300 hover:bg-[#ffd1ef]/90">
-                                    Play Sleep Playlist
-                                </a>
-                            </div>
+                </button>
+            </div>
+        </section>
+
+        <!-- COMPOSE + STATUS -->
+        <section class="grid" id="send">
+            <!-- Compose card -->
+            <article class="card" aria-label="compose a message">
+                <h2>send a whisper</h2>
+
+                <form method="POST" action="{{ route('messages.store') }}" class="form" novalidate>
+                    @csrf
+
+                    <div class="row">
+                        <label for="to">recipient</label>
+                        <div class="field">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zM3 21a9 9 0 1118 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            <input id="to" name="to" type="text" placeholder="e.g. @dawn or email" required autocomplete="off">
                         </div>
-                    </section>
-
-                    <div class="grid gap-10 lg:grid-cols-5 lg:gap-12">
-                        <section class="relative rounded-3xl border border-white/10 bg-[#140c2f]/70 p-8 shadow-[0_20px_45px_-25px_rgba(10,6,32,0.9)] backdrop-blur-xl lg:col-span-3">
-                            <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-                            <h2 class="text-2xl font-semibold text-white">Send a Whisper</h2>
-                            <p class="mt-4 text-base leading-relaxed text-white/75">
-                                Choose your recipient, breathe deep, and write with intention. Each message is wrapped in shimmering gradients and delivered with gentle animations.
-                            </p>
-                            <p class="mt-5 text-base leading-relaxed text-white/70">
-                                Let your words glow: add a memory, a promise, or a guiding mantra to light their path when night feels heavy.
-                            </p>
-                        </section>
-
-                        <section class="relative flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_-24px_rgba(20,8,52,0.9)] backdrop-blur-xl lg:col-span-2">
-                            <h2 class="text-2xl font-semibold text-white">Message Templates</h2>
-                            <ul class="mt-2 grid gap-3 text-sm text-white/75 sm:grid-cols-2 lg:grid-cols-1">
-                                <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#201944]/70 px-4 py-3 shadow-inner shadow-white/5">
-                                    <span class="h-2 w-2 rounded-full bg-[#ff8fc7] shadow-[0_0_10px_2px_rgba(255,143,199,0.6)]"></span>
-                                    Stardust Gratitude &mdash; thank-you notes soaked in dusk
-                                </li>
-                                <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#201944]/70 px-4 py-3 shadow-inner shadow-white/5">
-                                    <span class="h-2 w-2 rounded-full bg-[#5f64ff] shadow-[0_0_10px_2px_rgba(95,100,255,0.55)]"></span>
-                                    Moonbeam Check-in &mdash; a warm question for soft nights
-                                </li>
-                                <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#201944]/70 px-4 py-3 shadow-inner shadow-white/5">
-                                    <span class="h-2 w-2 rounded-full bg-[#c4a6ff] shadow-[0_0_10px_2px_rgba(196,166,255,0.45)]"></span>
-                                    Aurora Affirmation &mdash; reminders to breathe with the sky
-                                </li>
-                                <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#201944]/70 px-4 py-3 shadow-inner shadow-white/5">
-                                    <span class="h-2 w-2 rounded-full bg-[#ffdda6] shadow-[0_0_10px_2px_rgba(255,221,166,0.45)]"></span>
-                                    Nebula Invitation &mdash; extend a dream-sharing ritual
-                                </li>
-                            </ul>
-                        </section>
                     </div>
 
-                    <section class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-[#231945]/80 via-[#1d1a3d]/85 to-[#231945]/80 p-8 shadow-[0_20px_50px_-25px_rgba(12,8,35,0.9)] backdrop-blur-xl">
-                        <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,143,199,0.25),_transparent_60%)]"></div>
-                        <h2 class="text-xl font-semibold text-white">Signal Status</h2>
-                        <div class="mt-6 flex flex-col gap-4 sm:flex-row">
-                            <div class="flex flex-1 items-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
-                                <span class="text-xs uppercase tracking-[0.3em] text-white/60">Mood</span>
-                                <span class="text-sm text-white/85">Open-hearted with shimmering anticipation.</span>
-                            </div>
-                            <div class="flex flex-1 items-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
-                                <span class="text-xs uppercase tracking-[0.3em] text-white/60">Delivery</span>
-                                <span class="text-sm text-white/85">Messages drift out as luminous constellations at midnight.</span>
-                            </div>
-                            <div class="flex flex-1 items-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
-                                <span class="text-xs uppercase tracking-[0.3em] text-white/60">Echo</span>
-                                <span class="text-sm text-white/85">Replies arrive with a gentle chime and ambient glow.</span>
-                            </div>
+                    <div class="row">
+                        <label for="topic">topic</label>
+                        <div class="field">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            <select id="topic" name="topic">
+                                <option value="gratitude">gratitude</option>
+                                <option value="check-in">check-in</option>
+                                <option value="affirmation">affirmation</option>
+                                <option value="invite">invite</option>
+                            </select>
                         </div>
-                    </section>
-                </div>
-            </main>
-        </div>
+                    </div>
 
-        @if (Route::has('login'))
-            <div class="h-14.5 hidden lg:block"></div>
-        @endif
-    </body>
+                    <div class="row">
+                        <label for="subject">subject</label>
+                        <div class="field">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            <input id="subject" name="subject" type="text" placeholder="a tiny title (optional)" maxlength="80">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="body">message</label>
+                        <div class="field" style="align-items:flex-start">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-top:2px" aria-hidden="true"><path d="M21 7L9 19l-6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            <textarea id="body" name="body" placeholder="write something kind…" maxlength="800" required></textarea>
+                        </div>
+                        <div class="meta">
+                            <div style="display:flex;gap:8px;flex-wrap:wrap">
+                                <span class="pill" data-chip="🌙"><span class="dot lilac"></span> moonsoft</span>
+                                <span class="pill" data-chip="💌"><span class="dot rose"></span> gentle</span>
+                                <span class="pill" data-chip="🫶"><span class="dot glow"></span> supportive</span>
+                                <span class="pill" data-chip="✨"><span class="dot tint"></span> hopeful</span>
+                            </div>
+                            <span id="count">0 / 800</span>
+                        </div>
+                    </div>
+
+                    <div class="actions" style="margin-top:6px">
+                        <button class="btn alt" type="submit">Send</button>
+                        <button class="btn ghost" type="button" id="previewBtn">Preview</button>
+                        <button class="btn" type="reset">Clear</button>
+                    </div>
+
+                    <output id="preview" style="display:none;margin-top:12px">
+                        <div class="template" aria-live="polite">
+                            <strong style="color:var(--hush)">preview</strong>
+                            <div id="previewText" style="white-space:pre-wrap;opacity:.95"></div>
+                            <button class="btn" type="button" id="closePreview">close</button>
+                        </div>
+                    </output>
+                </form>
+            </article>
+
+            <!-- Status / Tips -->
+            <aside class="card" aria-label="signal status">
+                <h2>signal status</h2>
+                <div class="template-list" style="margin:8px 0 6px">
+                    <div class="template">
+                        <strong>mood</strong>
+                        <div>open-hearted with shimmering anticipation</div>
+                    </div>
+                    <div class="template">
+                        <strong>delivery</strong>
+                        <div>messages glide out at local midnight with a soft chime</div>
+                    </div>
+                    <div class="template">
+                        <strong>etiquette</strong>
+                        <div>include the question in your first line—context beats “hi”</div>
+                    </div>
+                </div>
+                <p style="font-size:12px;opacity:.8">
+                    heads-up: replies can be slow; honesty > speed. be kind to sleepy humans.
+                </p>
+            </aside>
+        </section>
+
+        <!-- TEMPLATES + SHORTCUTS -->
+        <section class="card" id="templates" aria-label="message templates">
+            <h2>message templates</h2>
+            <div class="template-list">
+                <div class="template">
+                    <span class="pill"><span class="dot rose"></span> stardust gratitude</span>
+                    <div>
+                        <p style="margin:4px 0 0">
+                            “thinking of you tonight—thank you for <em>[specific thing]</em>. you make the heavy parts lighter.”
+                        </p>
+                    </div>
+                    <button class="btn" data-insert="thinking of you tonight—thank you for [specific thing]. you make the heavy parts lighter.">insert</button>
+                </div>
+                <div class="template">
+                    <span class="pill"><span class="dot lilac"></span> moonbeam check-in</span>
+                    <div>
+                        <p style="margin:4px 0 0">
+                            “hey, doing a gentle check-in. how’s your energy? want a short call or just quiet company?”
+                        </p>
+                    </div>
+                    <button class="btn" data-insert="hey, doing a gentle check-in. how’s your energy? want a short call or just quiet company?">insert</button>
+                </div>
+                <div class="template">
+                    <span class="pill"><span class="dot glow"></span> aurora affirmation</span>
+                    <div>
+                        <p style="margin:4px 0 0">
+                            “remember: you’re allowed to rest. you’re allowed to take up space. breathing with you.”
+                        </p>
+                    </div>
+                    <button class="btn" data-insert="remember: you’re allowed to rest. you’re allowed to take up space. breathing with you.">insert</button>
+                </div>
+                <div class="template">
+                    <span class="pill"><span class="dot tint"></span> nebula invite</span>
+                    <div>
+                        <p style="margin:4px 0 0">
+                            “tea + rain playlist sometime this week? tue/wed night works. no pressure, just cozy.”
+                        </p>
+                    </div>
+                    <button class="btn" data-insert="tea + rain playlist sometime this week? tue/wed night works. no pressure, just cozy.">insert</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="card" aria-label="contact">
+            <h2>moonlight, continued</h2>
+            <p>always down to meet good humans—slow burn. start with context, not just “hi”.</p>
+            <div class="actions" style="margin-top:12px">
+                <a class="btn alt" href="{{ route('playlist') }}">sleep playlist</a>
+                <a class="btn ghost" href="{{ route('journal') }}">dream journal</a>
+                <a class="btn" href="{{ route('messages') }}">back to inbox</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span>made at an unreasonable hour</span> ·
+        <span>be gentle with yourself</span>
+    </footer>
+</div>
+
+<script>
+    // soft rain toggle (visual only)
+    (function(){
+        const btn = document.getElementById('rainToggle');
+        if(!btn) return;
+        btn.addEventListener('click', () => {
+            const on = btn.getAttribute('aria-pressed') === 'true';
+            btn.setAttribute('aria-pressed', String(!on));
+            document.body.style.background = !on
+                ? 'radial-gradient(1200px 800px at 20% -10%, #1a1b2f 0%, #0b0c12 60%), repeating-linear-gradient(180deg, rgba(160,155,255,.05) 0 2px, transparent 2px 4px)'
+                : 'radial-gradient(1200px 800px at 20% -10%, #1a1b2f 0%, #0b0c12 60%)';
+        }, {passive:true});
+    })();
+
+    // character counter, template insert, chips to body
+    (function(){
+        const body = document.getElementById('body');
+        const count = document.getElementById('count');
+        const previewBtn = document.getElementById('previewBtn');
+        const out = document.getElementById('preview');
+        const outText = document.getElementById('previewText');
+        const closePrev = document.getElementById('closePreview');
+
+        if(body && count){
+            const update = () => { count.textContent = `${body.value.length} / ${body.maxLength}`; };
+            body.addEventListener('input', update, {passive:true});
+            update();
+        }
+
+        document.querySelectorAll('[data-insert]').forEach(btn=>{
+            btn.addEventListener('click', ()=>{
+                const val = btn.getAttribute('data-insert');
+                if(!body) return;
+                const s = body.selectionStart ?? body.value.length;
+                const e = body.selectionEnd ?? body.value.length;
+                body.setRangeText(val, s, e, 'end');
+                body.dispatchEvent(new Event('input'));
+                body.focus();
+            }, {passive:true});
+        });
+
+        document.querySelectorAll('.pill[data-chip]').forEach(p=>{
+            p.addEventListener('click', ()=>{
+                if(!body) return;
+                const chip = p.getAttribute('data-chip') + ' ';
+                const s = body.selectionStart ?? body.value.length;
+                const e = body.selectionEnd ?? body.value.length;
+                body.setRangeText(chip, s, e, 'end');
+                body.dispatchEvent(new Event('input'));
+                body.focus();
+            }, {passive:true});
+        });
+
+        if(previewBtn && out && outText){
+            previewBtn.addEventListener('click', ()=>{
+                const subject = (document.getElementById('subject')?.value || '').trim();
+                const to = (document.getElementById('to')?.value || '').trim();
+                const msg = (body?.value || '').trim();
+                const header = to ? `to: ${to}\n` : '';
+                const subj = subject ? `subject: ${subject}\n` : '';
+                outText.textContent = header + subj + (msg || '—');
+                out.style.display = 'block';
+            }, {passive:true});
+        }
+        if(closePrev && out){ closePrev.addEventListener('click', ()=> out.style.display = 'none'); }
+    })();
+</script>
+</body>
 </html>
