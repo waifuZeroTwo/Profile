@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\JournalEntryController;
+use App\Http\Controllers\MoonlightMessageController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
 use Livewire\Volt\Volt;
@@ -11,6 +13,8 @@ Route::get('/', function () {
 Route::view('/journal', 'journal')->name('journal');
 Route::view('/playlist', 'playlist')->name('playlist');
 Route::view('/messages', 'messages')->name('messages');
+Route::post('/journal', [JournalEntryController::class, 'store'])->name('journal.store');
+Route::post('/messages', [MoonlightMessageController::class, 'store'])->name('messages.store');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
