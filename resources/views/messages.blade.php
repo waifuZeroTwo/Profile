@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Moonlight Messages — Afterglow Studio</title>
 
         <link rel="icon" href="/favicon.ico" sizes="any">
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -77,21 +77,21 @@
                         <div class="relative">
                             <p class="text-sm uppercase tracking-[0.4em] text-white/60">afterglow studio</p>
                             <h1 class="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-                                Welcome to my dusk-lit universe
+                                Moonlight Messages
                             </h1>
                             <p class="mt-6 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
-                                I craft dreamy digital experiences steeped in twilight hues and gentle motion. This little corner of the web is where ambient code, cozy aesthetics, and slow living intertwine.
+                                Whisper a note into the dusk and let it travel on gradients of starlight to someone you cherish.
                             </p>
                             <div class="mt-8 flex flex-wrap gap-4">
-                                <a href="{{ route('journal') }}" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/30 bg-white/10 px-6 py-2 text-sm font-medium tracking-wide text-white shadow-[0_10px_30px_-15px_rgba(255,145,193,0.8)] transition-all duration-300 hover:border-[#ff8fc7] hover:bg-[#ff8fc7]/20">
+                                <a href="{{ route('messages') }}" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/30 bg-white/10 px-6 py-2 text-sm font-medium tracking-wide text-white shadow-[0_10px_30px_-15px_rgba(255,145,193,0.8)] transition-all duration-300 hover:border-[#ff8fc7] hover:bg-[#ff8fc7]/20">
                                     <span class="absolute inset-0 bg-gradient-to-r from-[#ff8fc7]/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
-                                    <span class="relative">Dream Journal</span>
+                                    <span class="relative">Compose a Message</span>
                                 </a>
-                                <a href="{{ route('playlist') }}" class="relative inline-flex items-center justify-center rounded-full border border-white/20 bg-[#1c1b3e]/80 px-6 py-2 text-sm font-medium text-white shadow-[0_15px_35px_-20px_rgba(95,100,255,0.9)] transition-all duration-300 hover:border-[#5f64ff]/60 hover:bg-[#27255c]">
-                                    Sleep Playlist
+                                <a href="{{ route('journal') }}" class="relative inline-flex items-center justify-center rounded-full border border-white/20 bg-[#1c1b3e]/80 px-6 py-2 text-sm font-medium text-white shadow-[0_15px_35px_-20px_rgba(95,100,255,0.9)] transition-all duration-300 hover:border-[#5f64ff]/60 hover:bg-[#27255c]">
+                                    Visit Dream Journal
                                 </a>
-                                <a href="{{ route('messages') }}" class="relative inline-flex items-center justify-center rounded-full border border-transparent bg-[#ff8fc7]/80 px-6 py-2 text-sm font-semibold text-[#1b0f2b] shadow-[0_20px_40px_-18px_rgba(255,143,199,0.8)] transition-all duration-300 hover:bg-[#ffd1ef]/90">
-                                    Moonlight Messages
+                                <a href="{{ route('playlist') }}" class="relative inline-flex items-center justify-center rounded-full border border-transparent bg-[#ff8fc7]/80 px-6 py-2 text-sm font-semibold text-[#1b0f2b] shadow-[0_20px_40px_-18px_rgba(255,143,199,0.8)] transition-all duration-300 hover:bg-[#ffd1ef]/90">
+                                    Play Sleep Playlist
                                 </a>
                             </div>
                         </div>
@@ -100,33 +100,33 @@
                     <div class="grid gap-10 lg:grid-cols-5 lg:gap-12">
                         <section class="relative rounded-3xl border border-white/10 bg-[#140c2f]/70 p-8 shadow-[0_20px_45px_-25px_rgba(10,6,32,0.9)] backdrop-blur-xl lg:col-span-3">
                             <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-                            <h2 class="text-2xl font-semibold text-white">A little about me</h2>
+                            <h2 class="text-2xl font-semibold text-white">Send a Whisper</h2>
                             <p class="mt-4 text-base leading-relaxed text-white/75">
-                                I'm Nova, a multidisciplinary creator exploring the liminal space between design and code. My evenings are spent sketching interface constellations, weaving lo-fi loops, and writing letters to future selves. I believe in crafting interfaces that feel like a slow exhale&mdash;soft, intentional, and quietly magical.
+                                Choose your recipient, breathe deep, and write with intention. Each message is wrapped in shimmering gradients and delivered with gentle animations.
                             </p>
                             <p class="mt-5 text-base leading-relaxed text-white/70">
-                                When I'm not immersed in pixels, you'll find me journaling under warm lamplight, experimenting with analog synths, or tending to my ever-growing collection of midnight-hued plants.
+                                Let your words glow: add a memory, a promise, or a guiding mantra to light their path when night feels heavy.
                             </p>
                         </section>
 
                         <section class="relative flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_-24px_rgba(20,8,52,0.9)] backdrop-blur-xl lg:col-span-2">
-                            <h2 class="text-2xl font-semibold text-white">Constellations I'm exploring</h2>
+                            <h2 class="text-2xl font-semibold text-white">Message Templates</h2>
                             <ul class="mt-2 grid gap-3 text-sm text-white/75 sm:grid-cols-2 lg:grid-cols-1">
                                 <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#201944]/70 px-4 py-3 shadow-inner shadow-white/5">
                                     <span class="h-2 w-2 rounded-full bg-[#ff8fc7] shadow-[0_0_10px_2px_rgba(255,143,199,0.6)]"></span>
-                                    Ambient interface storytelling
+                                    Stardust Gratitude &mdash; thank-you notes soaked in dusk
                                 </li>
                                 <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#201944]/70 px-4 py-3 shadow-inner shadow-white/5">
                                     <span class="h-2 w-2 rounded-full bg-[#5f64ff] shadow-[0_0_10px_2px_rgba(95,100,255,0.55)]"></span>
-                                    Generative art &amp; subtle motion
+                                    Moonbeam Check-in &mdash; a warm question for soft nights
                                 </li>
                                 <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#201944]/70 px-4 py-3 shadow-inner shadow-white/5">
                                     <span class="h-2 w-2 rounded-full bg-[#c4a6ff] shadow-[0_0_10px_2px_rgba(196,166,255,0.45)]"></span>
-                                    Calm-first product strategy
+                                    Aurora Affirmation &mdash; reminders to breathe with the sky
                                 </li>
                                 <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#201944]/70 px-4 py-3 shadow-inner shadow-white/5">
                                     <span class="h-2 w-2 rounded-full bg-[#ffdda6] shadow-[0_0_10px_2px_rgba(255,221,166,0.45)]"></span>
-                                    Dream journaling rituals
+                                    Nebula Invitation &mdash; extend a dream-sharing ritual
                                 </li>
                             </ul>
                         </section>
@@ -134,19 +134,19 @@
 
                     <section class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-[#231945]/80 via-[#1d1a3d]/85 to-[#231945]/80 p-8 shadow-[0_20px_50px_-25px_rgba(12,8,35,0.9)] backdrop-blur-xl">
                         <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,143,199,0.25),_transparent_60%)]"></div>
-                        <h2 class="text-xl font-semibold text-white">Current atmosphere</h2>
+                        <h2 class="text-xl font-semibold text-white">Signal Status</h2>
                         <div class="mt-6 flex flex-col gap-4 sm:flex-row">
                             <div class="flex flex-1 items-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
-                                <span class="text-xs uppercase tracking-[0.3em] text-white/60">Feeling</span>
-                                <span class="text-sm text-white/85">Softly electric with lavender dusk and new ideas.</span>
+                                <span class="text-xs uppercase tracking-[0.3em] text-white/60">Mood</span>
+                                <span class="text-sm text-white/85">Open-hearted with shimmering anticipation.</span>
                             </div>
                             <div class="flex flex-1 items-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
-                                <span class="text-xs uppercase tracking-[0.3em] text-white/60">Reading</span>
-                                <span class="text-sm text-white/85">“The Night Watch” &mdash; tracing narratives in the quiet hours.</span>
+                                <span class="text-xs uppercase tracking-[0.3em] text-white/60">Delivery</span>
+                                <span class="text-sm text-white/85">Messages drift out as luminous constellations at midnight.</span>
                             </div>
                             <div class="flex flex-1 items-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
-                                <span class="text-xs uppercase tracking-[0.3em] text-white/60">Listening</span>
-                                <span class="text-sm text-white/85">Hushed synth waves + rain on skylights playlist.</span>
+                                <span class="text-xs uppercase tracking-[0.3em] text-white/60">Echo</span>
+                                <span class="text-sm text-white/85">Replies arrive with a gentle chime and ambient glow.</span>
                             </div>
                         </div>
                     </section>

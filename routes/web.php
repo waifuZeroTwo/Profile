@@ -8,6 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::view('/journal', 'journal')->name('journal');
+Route::view('/playlist', 'playlist')->name('playlist');
+Route::view('/messages', 'messages')->name('messages');
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
