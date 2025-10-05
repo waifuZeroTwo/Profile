@@ -94,7 +94,12 @@
         .card p{margin:8px 0 0;line-height:1.6;opacity:.95}
 
         .pills{display:grid;gap:10px;margin-top:10px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
-        .pill{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.12);font-size:14px}
+        .pill{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.12);font-size:14px;text-decoration:none;color:inherit;transition:background .25s ease,border .25s ease,transform .2s ease}
+        .pill:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);transform:translateY(-1px)}
+        .pill:focus-visible{outline:none;box-shadow:var(--ring)}
+        .pill strong{color:var(--hush);display:block;font-size:13px}
+        .pill small{display:block;font-size:12px;opacity:.75;margin-top:2px}
+        .pill .text{display:flex;flex-direction:column;gap:2px}
         .dot{width:8px;height:8px;border-radius:999px;box-shadow:0 0 10px 2px currentColor}
         .lilac{color:var(--lilac)} .rose{color:var(--rose)} .glow{color:var(--glow)}
 
@@ -227,6 +232,35 @@
                 <div class="pill" role="listitem"><span class="dot rose"></span> french — semi-fluent</div>
                 <div class="pill" role="listitem"><span class="dot lilac"></span> arabic — conversational (speaking)</div>
                 <div class="pill" role="listitem"><span class="dot glow"></span> japanese — learning (JLPT N5)</div>
+            </div>
+        </section>
+
+        <!-- OTHER PAGES -->
+        <section class="card" id="spaces">
+            <h2>soft places around here</h2>
+            <p style="margin-top:6px;opacity:.85">drift into the other rooms when you want to linger a little longer.</p>
+            <div class="pills" role="list">
+                <a class="pill" href="{{ route('journal') }}" role="listitem">
+                    <span class="dot lilac"></span>
+                    <span class="text">
+                        <strong>Dream Journal</strong>
+                        <small>collect nightly fragments, moods, and sleepy story beats.</small>
+                    </span>
+                </a>
+                <a class="pill" href="{{ route('playlist') }}" role="listitem">
+                    <span class="dot glow"></span>
+                    <span class="text">
+                        <strong>Sleep Playlist</strong>
+                        <small>curl up with duskwave mixes, rain, and soft ambient loops.</small>
+                    </span>
+                </a>
+                <a class="pill" href="{{ route('messages') }}" role="listitem">
+                    <span class="dot rose"></span>
+                    <span class="text">
+                        <strong>Moonlight Messages</strong>
+                        <small>leave a gentle note or ask for a listening ear when it’s heavy.</small>
+                    </span>
+                </a>
             </div>
         </section>
 
